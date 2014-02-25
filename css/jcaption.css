@@ -1,0 +1,43 @@
+/* リセット&セットアップ */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	line-height: 0;
+	vertical-align: bottom;
+}
+
+/*
+#container {
+	width: 640px;
+	margin: 40px auto;
+}
+*/
+
+h1 {
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+
+.post {
+	margin: 0 0 20px 0;
+}
+
+/* jCaptionの設定 */
+div.jCaption {
+	/*width: 640px;
+	height: 420px;
+	border: 5px solid #000; */
+	position: relative;
+}
+
+div.jCaption p {
+	font-size: 14px;
+	color: #fff;
+	width: 620px;
+	margin: 0;
+	padding: 10px;
+	background: #000;
+}
