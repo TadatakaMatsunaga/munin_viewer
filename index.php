@@ -15,6 +15,9 @@
     <!-- Custom styles for this template -->
     <link href="css/starter-template.css" rel="stylesheet">
 
+        <!-- Original CSS-->
+    <link href="css/muninviewer.css" rel="stylesheet">
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
@@ -26,7 +29,10 @@
 
   <?php
     require_once('./navbar.php');
+    require_once('./setConfig.php');
   ?>
+
+
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
@@ -37,6 +43,9 @@
       </div>
     </div>
 
+  <?php
+    require_once('./history.php');
+  ?>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
