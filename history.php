@@ -12,13 +12,17 @@
             }
           $result = arsort($file_list, SORT_STRING);
           }
-        closedir($handle);  
+        closedir($handle);
       }
     ?>
 
     <div class="container">
-      <div class="highlight">
-      <p>最新更新履歴</p>
+      <div class="panel panel-default">
+      <div class="panel-heading">コメント更新履歴</div>
+
+      <table class="table">
+      <tbody>
+      
       <?php
         foreach($file_list as $key=>$val){
           $file_url = $path.$key;
@@ -41,10 +45,11 @@
             flock($handle, LOCK_UN);
             fclose($handle);
           }
-
-          echo "<a href=\"detail.php?svn=$str[0]&checkbox=$str[1]&term=$str[2]\"  target=\"_blank\">";
-          echo $str[0]." ".$str[1].": ".$last_comment."</a><br>";
+          echo "<tr><td><a href=\"detail.php?svn=$str[0]&checkbox=$str[1]&term=$str[2]\"  target=\"_blank\">";
+          echo "".$str[0]." (".$str[1].")</a><td>".$last_comment."</td></tr>";
         }
       ?>
+      </tbody></table>
+      </div>
       </div>
     </div>

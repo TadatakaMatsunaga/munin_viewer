@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="ja">
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +23,6 @@
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
-
   </head>
 
   <body>
@@ -35,21 +32,7 @@
     require_once('./setConfig.php');
   ?>
 
-    <p>
-
-    <?php
-    if(isset($_POST['Submit'])) {
-      if(empty($_POST['chk'])){
-        echo '<div id="flashMessage" class="container">';
-        echo '<div class="alert alert-danger">';
-        echo '<a class="close" data-dismiss="alert">×</a>';
-        echo '<strong>少なくとも１つは選択してください！</strong>';
-        echo '</div></div>';
-      }
-    }
-    ?>
-
-    
+    <p>    
     <p>
     <div class="container">
     <div class="highlight">
@@ -130,6 +113,18 @@
         }
       ?>
     </div>
+
+    <?php
+    if(isset($_POST['Submit'])) {
+      if(empty($_POST['chk'])){
+        echo '<div id="flashMessage" class="container">';
+        echo '<div class="alert alert-danger">';
+        echo '<a class="close" data-dismiss="alert">×</a>';
+        echo '<strong>少なくとも１つは選択してください！</strong>';
+        echo '</div></div>';
+      }
+    }
+    ?>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
